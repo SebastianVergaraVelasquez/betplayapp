@@ -15,4 +15,12 @@ public class UserController {
         model.addAttribute("user", user);
         return "details";
     }
+
+    @GetMapping("/userform")
+    public String userForm(Model model){
+        User user = new User("Sebastian", "Vergara");
+        model.addAttribute("title", "Soy el valor de la clave title");
+        model.addAttribute("user", user);
+        return "userForm";
+    }
 }
